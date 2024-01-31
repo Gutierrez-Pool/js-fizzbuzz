@@ -24,18 +24,23 @@ for (let i = 1; i <= 100; i++) {
     newElement.className = "square";
 
     if (i % 15 == 0) {
-        grigliaElement.innerHTML += `fizzbuzz`
-        newElement.className += " fizzbuzz"
+        newElement.innerHTML = `fizzbuzz`;
+        newElement.className += " fizzbuzz";
+        
     } else {
 
         if(i % 5 == 0) {
-            grigliaElement.innerHTML += `buzz`
+            newElement.innerHTML = `buzz`;
+            newElement.className += " buzz";
+
         }
         if(i % 3 == 0) {
-            grigliaElement.innerHTML += `fizz`
+            newElement.innerHTML = `fizz`;
+            newElement.className += " fizz";
+
         }
     }
+    grigliaElement.append(newElement);
 
-grigliaElement.append(newElement);
 
 } 
